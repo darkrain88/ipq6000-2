@@ -63,18 +63,22 @@
 8. 更换go 版本
 
    rm -rf feeds/packages/lang/golang
+   
    git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
    
-9. 安装 mosdns
+10. 安装 mosdns
 rm -rf feeds/packages/net/v2ray-geodata
 
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+
 make menuconfig # choose LUCI -> Applications -> luci-app-mosdns
 make package/mosdns/luci-app-mosdns/compile V=s
 
 10.安装ddns
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
+
    make menuconfig
 
 11 添加pw feed
